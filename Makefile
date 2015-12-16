@@ -24,3 +24,6 @@ state:
 
 bash:
 	@$(cmd) run --rm elk bash
+
+logs:
+	@$(cmd) logs

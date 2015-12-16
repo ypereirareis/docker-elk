@@ -26,10 +26,14 @@ make state # Container status
 make bash # Log into another elk container instance
 make build # Rebuild the image
 ```
+
 ## SSL
 
 Logstash use SSL certificates to secure data transfer. Default certificates are included in the built image.
 The default certificate is available in the `ssl` directory.
+
+The embedded certificates works with `elk` as domain name.
+
 If you want to generate new SSL certificates for security reasons for instance:
 
 ```shell

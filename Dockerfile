@@ -41,13 +41,15 @@ ADD ./ssl/logstash-forwarder.key /etc/pki/tls/private/logstash-forwarder.key
 ADD ./filters/01-lumberjack-input.conf /etc/logstash/conf.d/01-lumberjack-input.conf
 ADD ./filters/10-syslog.conf /etc/logstash/conf.d/10-syslog.conf
 ADD ./filters/11-nginx.conf /etc/logstash/conf.d/11-nginx.conf
-ADD ./filters/12-symfony.conf /etc/logstash/conf.d/12-symfony.conf
+ADD ./filters/12-apache.conf /etc/logstash/conf.d/12-apache.conf
+ADD ./filters/15-symfony.conf /etc/logstash/conf.d/15-symfony.conf
 ADD ./filters/30-lumberjack-output.conf /etc/logstash/conf.d/30-lumberjack-output.conf
 
 
 # Logstash - Patterns
 # ----------------------------------------------------------------------------
 ADD ./patterns/nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
+ADD ./patterns/apache.pattern ${LOGSTASH_HOME}/patterns/apache
 ADD ./patterns/symfony.pattern ${LOGSTASH_HOME}/patterns/symfony
 RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
 

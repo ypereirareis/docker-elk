@@ -7,7 +7,7 @@ build: remove
 	@echo "$(step) Building ELK $(step)"
 	@$(cmd) build
 
-remove:
+remove: stop
 	@echo "$(step) Removing ELK $(step)"
 	@$(cmd) rm -f
 

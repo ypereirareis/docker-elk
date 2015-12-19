@@ -1,3 +1,0 @@
-MYSQL_MAIN ^# User@Host: %{USER:user}(?:\[[^\]]+\])?\s+@\s+%{HOST:host}?\s+\[%{IP:ip}?\]
-MYSQL_QUERY ^# Query_time: %{NUMBER:duration:float}\s+Lock_time: %{NUMBER:lock_wait:float} Rows_sent: %{NUMBER:results:int} \s*Rows_examined: %{NUMBER:scanned:int}
-MYSQL_TIME ^SET timestamp=%{NUMBER:timestamp};

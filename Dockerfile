@@ -52,6 +52,7 @@ ADD ./filters/30-lumberjack-output.conf /etc/logstash/conf.d/30-lumberjack-outpu
 ADD ./patterns/nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
 ADD ./patterns/apache.pattern ${LOGSTASH_HOME}/patterns/apache
 ADD ./patterns/symfony.pattern ${LOGSTASH_HOME}/patterns/symfony
+ADD ./patterns/mysql.pattern ${LOGSTASH_HOME}/patterns/mysql
 RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
 
 ###############################################################################

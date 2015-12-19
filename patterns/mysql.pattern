@@ -1,0 +1,3 @@
+MYSQL_HOST # User@Host: %{WORD:user}\[%{WORD}\] @ (%{HOSTNAME:client_hostname}|) \[(%{IP:client_ip}|)\]
+MYSQL_QUERY_TIME # Query_time: %{NUMBER:query_time:float}  Lock_time: %{NUMBER:lock_time:float} Rows_sent: %{NUMBER:rows_sent:int}  Rows_examined: %{NUMBER:rows_examined:int}
+MYSQL_QUERY (?m)SET timestamp=%{NUMBER:timestamp};%{GREEDYDATA:mysql_query}

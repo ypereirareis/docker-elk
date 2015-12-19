@@ -42,7 +42,7 @@ ADD ./filters/01-lumberjack-input.conf /etc/logstash/conf.d/01-lumberjack-input.
 ADD ./filters/10-syslog.conf /etc/logstash/conf.d/10-syslog.conf
 ADD ./filters/11-nginx.conf /etc/logstash/conf.d/11-nginx.conf
 ADD ./filters/12-apache.conf /etc/logstash/conf.d/12-apache.conf
-ADD ./filters/13-mysql.conf /etc/logstash/conf.d/13-mysql.conf
+ADD ./filters/13-mysql-slow.conf /etc/logstash/conf.d/13-mysql-slow.conf
 ADD ./filters/15-symfony.conf /etc/logstash/conf.d/15-symfony.conf
 ADD ./filters/30-lumberjack-output.conf /etc/logstash/conf.d/30-lumberjack-output.conf
 
@@ -52,7 +52,7 @@ ADD ./filters/30-lumberjack-output.conf /etc/logstash/conf.d/30-lumberjack-outpu
 ADD ./patterns/nginx.pattern ${LOGSTASH_HOME}/patterns/nginx
 ADD ./patterns/apache.pattern ${LOGSTASH_HOME}/patterns/apache
 ADD ./patterns/symfony.pattern ${LOGSTASH_HOME}/patterns/symfony
-ADD ./patterns/mysql.pattern ${LOGSTASH_HOME}/patterns/mysql
+ADD ./patterns/mysql-slow.pattern ${LOGSTASH_HOME}/patterns/mysql-slow
 RUN chown -R logstash:logstash ${LOGSTASH_HOME}/patterns
 
 ###############################################################################
